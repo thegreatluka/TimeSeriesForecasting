@@ -1,21 +1,22 @@
-Scenario:
+**Scenario**:
 
 Time series does not have a trend line and does not have seasonality component. We would use a Simple Exponential Smoothing model.
 
-Simple Exponential Smoothing Explained
-For simple exponential smoothing methods, the forecast is calculated by multiplying past values by relative weights, which are calculated based upon what is termed a smoothing parameter. You’ll also hear this called the alpha or α. This is the magnitude of the weight applied to the previous values, with the weights decreasing exponentially as the observations get older. The formula looks like this:
+**Simple Exponential Smoothing Explained**
 
-Forecast = Weightt Yt + Weightt-1 Yt-1 + Weightt-2 Yt-2 + ... + (1-α)n Yn
+For simple exponential smoothing methods, the forecast is calculated by multiplying past values by relative weights, which are calculated based upon what is termed a smoothing parameter. You’ll also hear this called the **alpha** or **α**. This is the magnitude of the weight applied to the previous values, with the weights decreasing exponentially as the observations get older. The formula looks like this:
+
+**Forecast = Weightt Yt + Weightt-1 Yt-1 + Weightt-2 Yt-2 + ... + (1-α)n Yn**
 
 where
 
-t is the number of time periods before the most recent period (e.g. t = 0 for the most recent time period, t = 1 for the time period before that).
+**t** is the number of time periods before the most recent period (e.g. t = 0 for the most recent time period, t = 1 for the time period before that).
 
-Yt = actual value of the time series in period t
+**Yt** = actual value of the time series in period t
 
-Weightt = α(1-α)t
+**Weightt** = α(1-α)t
 
-n = the total number of time periods
+**n** = the total number of time periods
 
 This model basically gives us a smooth line or LEVEL in our forecast that we can use to forecast the next period.
 
